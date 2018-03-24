@@ -177,7 +177,7 @@ body {
 }
 
 .resultCard a:link:hover {
-	
+	color: black;
 }
 
 footer {
@@ -192,12 +192,12 @@ footer {
 	padding-bottom: 0px;
 }
 
-a:link, a:visited, a:active {
+footer a:link, a:visited, a:active {
 	color: rgba(0, 0, 0, .85);
 	text-decoration: none;
 	font-weight:bold;}
 
-a:link:hover {
+footer a:link:hover {
 	color: rgb(255, 255, 255, 1);
 	text-decoration: none;
 	font-weight:bold;
