@@ -147,12 +147,12 @@ body {
 }
 
 .resultCard {
-	font-size: 19px;
+	font-size: 18px;
 	padding-top: 1%;
   padding-right: 5%;
   padding-bottom: 1%;
   padding-left: 5%;
-	margin-top: 2%;
+	margin-top: 1%;
 	background-color: rgba(255, 255, 255, .95);
 	border-radius: 5px;
 	-moz-box-shadow: -1px 1px 5px rgba(0, 0, 0, .75);
@@ -168,7 +168,7 @@ body {
 	font-size: 22px;
 	font-weight: 600;
 	color: black;
-	pading-bottom: 0px;
+	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
 
@@ -181,8 +181,11 @@ body {
 }
 
 footer {
+	line-height: 22px;
+	margin-top: 30px;
   position: absolute;
 	bottom: 0;
+	overflow: hidden;
   background: rgba(255,255,255, .65);
   color: rgba(0, 0, 0, .85);
   text-align: center;
