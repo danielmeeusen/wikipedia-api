@@ -86,10 +86,6 @@ body {
 	
 }
 
-.ui-menu .ui-menu-item {
-	
-}
-
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
 .ui-widget-header .ui-state-hover,
@@ -159,7 +155,7 @@ body {
   -webkit-box-shadow: -1px 1px 5px rgba(0, 0, 0, .75);
   box-shadow: -1px 1px 5px rgba(0, 0, 0, .75);	
 }
-. resultCard p {
+.resultCard p {
 	padding-top: 0px;
 	margin-top: 0px;
 }
