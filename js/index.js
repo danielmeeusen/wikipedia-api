@@ -19,22 +19,12 @@ $(document).ready(function(){
 		if (top === true) {
 			topSearchResults();
 		} else {
-			searchResults();
 			initToTop();
+			searchResults();
 		}
 		return false;
 	});	
 	
-	
-	
-	function placeFooter() {
-		if ($("body").height() > $(document).height()) {
-			$('footer').css('position', 'relative');
-    } else {
-			$('footer').css('position', 'absolute');
-		}
-	}
-
 				$("#topSearch").autocomplete({
 					delay: 0,
 			source: function(request, response) {
@@ -81,11 +71,9 @@ $(document).ready(function(){
 			}
 		});
 	
-	
-	
+		
 	function topSearchResults() {
 		var topSearchTerm = $('#topSearch').val();
-		console.log(topSearchTerm);
 		$.ajax({
 			url: 'https://en.wikipedia.org/w/api.php',
 			dataType: "jsonp",
@@ -103,15 +91,14 @@ $(document).ready(function(){
 							resultCards.push(`<div class="resultCard"><a href="${link[i]}" target="_blank"> ${title[i]}</></a><p>${description[i]}</p></div>`);
 						}
 						$('.searchResults').html(resultCards);
-					}					
+						$('#topSearch').blur();
+						$('#topSearch').val('');
+					}
 		});
-		$('#topSearch').blur();
-		$('#topSearch').val('');
 	}
-
+	
 	function searchResults() {
 		var searchTerm = $('#wikisearch').val();
-		console.log(searchTerm);
 		$.ajax({
 			url: 'https://en.wikipedia.org/w/api.php',
 			dataType: "jsonp",
@@ -129,11 +116,12 @@ $(document).ready(function(){
 							resultCards.push(`<div class="resultCard"><a href="${link[i]}" target="_blank"> ${title[i]}</></a><p>${description[i]}</p></div>`);
 						}
 						$('.searchResults').html(resultCards);
-						placeFooter();	
-					}					
+						$('#topSearch').blur();
+						$('#topSearch').val('');
+					}
 		});
 	}
-								
+									
 	function initToTop() {
 		top = true;
 		$(".input-group").hide();
